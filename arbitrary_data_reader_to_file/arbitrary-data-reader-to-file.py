@@ -26,14 +26,15 @@ while True:
 
 while True:
     save_file_confrm = input ("Do you want to save those input to a file? Y/N\n")
-    if "Y" or "y" in save_file_confrm:
+    if save_file_confrm == 'Y':
         filename = input("Enter your filename to save the data you've input:\n")
         for item in user_inputs_list:
             write_to_file(filename, item)
         print(filename + " saved at: " + get_file_location(filename))
         break
-    elif "N" or "n" in save_file_confrm:
+    elif save_file_confrm == 'N':
         print("oh... well then byee...")
+        break
     else:
         print("Invalid input!")
 
